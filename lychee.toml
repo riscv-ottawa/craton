@@ -1,0 +1,11 @@
+# SPDX-License-Identifier: Apache-2.0
+#
+# lychee offline link-checker config for the book and repository's own markdown.
+# Run locally with:
+#   lychee --config lychee.toml './*.md' 'docs/src/**/*.md'
+#
+# SUMMARY.md is validated by `mdbook build` instead (create-missing = false),
+# so it is excluded here to avoid flagging mdBook draft chapters ([Title]()).
+offline = true
+no_progress = true
+exclude_path = ["docs/src/SUMMARY.md", "docs/book"]

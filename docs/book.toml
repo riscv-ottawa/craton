@@ -1,0 +1,17 @@
+# SPDX-License-Identifier: Apache-2.0
+
+[book]
+title = "Project Craton"
+description = "An RV32 microcontroller for real-time and RTOS workloads"
+src = "src"
+language = "en"
+
+[build]
+create-missing = false
+
+[output.html]
+default-theme = "light"
+no-section-label = true
+git-repository-url = "https://github.com/riscv-ottawa/craton"
+edit-url-template = "https://github.com/riscv-ottawa/craton/edit/main/docs/{path}"
+fold = { enable = true, level = 1 }

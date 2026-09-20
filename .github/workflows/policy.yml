@@ -1,0 +1,33 @@
+# SPDX-License-Identifier: Apache-2.0
+
+name: policy
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  dco:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Sign-off on every commit
+        run: |
+          base="${{ github.event.pull_request.base.sha || github.event.before }}"
+          # A first push to a branch reports an all-zero base, and there is
+          # nothing to subtract, so the whole history is checked instead.
+          case "${base}" in
+            ""|0000000000000000000000000000000000000000) range="HEAD" ;;
+            *) range="${base}..HEAD" ;;
+          esac
+          ci/check-dco.sh "${range}"
+
+  spdx:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: License declared on every source file
+        run: ci/check-spdx.sh
