@@ -1,0 +1,6 @@
+[submodule "deps/cv32e40x"]
+	path = deps/cv32e40x
+	url = https://github.com/riscv-ottawa/cv32e40x.git
+[submodule "deps/cv32e40x-dv"]
+	path = deps/cv32e40x-dv
+	url = https://github.com/riscv-ottawa/cv32e40x-dv.git

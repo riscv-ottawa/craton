@@ -6,12 +6,13 @@ The design targets FPGA(s) for validation only and then silicon as the end goal.
 ## About this repository
 
 Everything for Project Craton lives in this repo: the RTL, verification environment, software, FPGA and physical design flows, and the documentation book.
-The main open source core is the one exception.
-Craton forks the CORE-V CV32E40X in a repository of its own, that is kept up-to-date and rebased on upstream, and pins it here under `deps/`.
-A change to the CV32E40X core belongs in the fork or committed upstream when possible.
+The external dependencies under `deps/` are the exception.
+For example, Craton forks the CV32E40X and its design-verification environment into repositories of their own, then pins both here under `deps/`.
 
-You may notice nothing much is here yet in this repo.
-This repository currently holds licensing, the contribution policy, and a documentation shell.
+Things under `deps/` are git submodules, so clone with `git clone --recurse-submodules`, or run `git submodule update --init` in a clone you already have.
+
+You may notice nothing much else is here yet in this repo.
+This repository currently holds licensing, the contribution policy, a documentation shell, and the two pinned forks.
 The rest will be added here as progress is made.
 
 ## Documentation

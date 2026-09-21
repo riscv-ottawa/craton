@@ -86,8 +86,10 @@ Files under `deps/` must keep the terms they already have, do not edit them.
 | `docs/`       | the documentation/book                                                                                      |
 | `ci/`         | continuous integration scripts                                                                              |
 
-Craton forks the CORE-V CV32E40X in a repository of its own, kept up-to-date and rebased on upstream, and pins it here under `deps/`.
-A change to the core belongs in the fork, not in this tree.
+Craton forks the CORE-V CV32E40X and its design-verification environment in repositories of their own, kept up-to-date and rebased on upstream, and pins both here under `deps/`.
+Each fork keeps its default branch as a clean mirror of upstream.
+Any change specific to Project Craton go on a separate `craton` branch, which have already been created and it what this repository pins under `deps/`.
+A change to the core or to its verification environment belongs in the forks, not in this tree.
 
 ## Style
 
