@@ -31,7 +31,7 @@ If the checks pass locally, say so; if you ran a simulation or a flow, show the 
 ## Sign your work
 
 Every commit carries a `Signed-off-by` line, which `git commit -s` adds for you.
-The line certifies that you wrote the change or otherwise have the right to submit it under this repository's licenses, and it is the Developer Certificate of Origin 1.1, published at <https://developercertificate.org/>.
+The sign-off certifies that you have the right to submit the contribution under the applicable license, as set out in the Developer Certificate of Origin 1.1 at <https://developercertificate.org/>.
 There is no contributor license agreement and no copyright assignment.
 
 Taking one of the examples from above, a complete commit message would become:

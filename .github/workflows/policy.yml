@@ -15,13 +15,19 @@ jobs:
         with:
           fetch-depth: 0
       - name: Sign-off on every commit
+        env:
+          DCO_BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
+          DCO_HEAD: ${{ github.event.pull_request.head.sha || github.sha }}
         run: |
-          base="${{ github.event.pull_request.base.sha || github.event.before }}"
           # A first push to a branch reports an all-zero base, and there is
           # nothing to subtract, so the whole history is checked instead.
-          case "${base}" in
-            ""|0000000000000000000000000000000000000000) range="HEAD" ;;
-            *) range="${base}..HEAD" ;;
+          case "${DCO_BASE}" in
+            ""|0000000000000000000000000000000000000000)
+              range="${DCO_HEAD}"
+              ;;
+            *)
+              range="${DCO_BASE}..${DCO_HEAD}"
+              ;;
           esac
           ci/check-dco.sh "${range}"
 
