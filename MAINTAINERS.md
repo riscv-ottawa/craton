@@ -7,6 +7,7 @@ Areas will be split out here once the design is large enough that one reviewer c
 | Name        | GitHub      | Scope          |
 | ----------- | ----------- | -------------- |
 | Yusef Karim | @yusefkarim | the whole tree |
+| Mouad Ouroui | @OMouad | the whole tree |
 
 ## Changing this list
 
