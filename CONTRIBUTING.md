@@ -48,6 +48,10 @@ Signed-off-by: Your Name <you@example.com>
 
 A commit without a sign-off will be denied by CI.
 
+Merge commits also need a sign-off.
+When using GitHub's Create a merge commit option, add your own `Signed-off-by` line to the merge commit message before confirming the merge.
+To create a signed-off merge commit locally, use `git merge --no-ff --signoff <branch>`.
+
 ## Licenses and SPDX
 
 Hardware is licensed under the Solderpad Hardware License v2.1 and everything else under Apache-2.0.
