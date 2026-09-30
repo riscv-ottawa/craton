@@ -3,7 +3,7 @@
 Craton is an RV32 microcontroller for real-time and RTOS workloads: a system on chip (SoC) with a fork of the OpenHW Foundation CORE-V CV32E40X at its heart.
 The design targets FPGA(s) for validation only and then silicon as the end goal.
 
-This book is organized by subject and follows the repository's layout closely.
+This book will be organized by subject and follow the repository's eventual layout closely.
 
 * Getting started takes you from a clone to something running.
 * Each hardware block is documented as needed: what it is, how it works, the ports and parameters it presents to an integrator, and the registers software drives it with.
