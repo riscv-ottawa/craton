@@ -1,0 +1,42 @@
+# SPDX-License-Identifier: Apache-2.0
+
+name: Feature request
+description: Propose new functionality, or a change to how something existing works.
+type: Feature
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: The part of the repository the change would touch. If unsure, pick the closest.
+      options:
+        - rtl
+        - dv
+        - sw
+        - fpga
+        - pd
+        - containers
+        - ci
+        - docs
+        - deps
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What you are trying to do and what stands in the way today.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: What you would change, and how it fits the existing design.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Other ways to solve the problem, and why this one is preferred.
