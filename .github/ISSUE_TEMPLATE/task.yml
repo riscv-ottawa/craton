@@ -1,0 +1,42 @@
+# SPDX-License-Identifier: Apache-2.0
+
+name: Task
+description: A specific piece of planned work, such as bring-up, scaffolding or a flow step.
+type: Task
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: The part of the repository the work lands in.
+      options:
+        - rtl
+        - dv
+        - sw
+        - fpga
+        - pd
+        - containers
+        - ci
+        - docs
+        - deps
+    validations:
+      required: true
+  - type: textarea
+    id: work
+    attributes:
+      label: Work
+      description: What has to be done, and why it is needed now.
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: Done when
+      description: The observable result that closes this task, such as a check passing, a page published or a target building.
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Depends on
+      description: Issues or pull requests that have to land first, if any.

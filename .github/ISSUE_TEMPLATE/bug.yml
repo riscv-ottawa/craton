@@ -1,0 +1,55 @@
+# SPDX-License-Identifier: Apache-2.0
+
+name: Bug report
+description: Something behaves differently from what the design, documentation or a check says it should.
+type: Bug
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: The part of the repository where the problem shows up. If unsure, pick the closest.
+      options:
+        - rtl
+        - dv
+        - sw
+        - fpga
+        - pd
+        - containers
+        - ci
+        - docs
+        - deps
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the bug
+      description: What happened, and what you expected to happen instead.
+      placeholder: |
+        If this used to work, say which commit it last worked on.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: The commands you ran, from a clean clone if possible.
+      placeholder: |
+        1. git clone --recurse-submodules ...
+        2. ...
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log output
+      description: Relevant output, pasted as text. It is formatted as code automatically.
+      render: shell
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Enough to reproduce what you ran.
+      placeholder: |
+        Craton commit: ba92400
+        Tools and versions: Verilator 5.052, ...
+        OS, and the board if on FPGA:

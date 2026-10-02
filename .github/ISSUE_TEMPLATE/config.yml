@@ -1,0 +1,10 @@
+# SPDX-License-Identifier: Apache-2.0
+
+blank_issues_enabled: false
+contact_links:
+  - name: Documentation
+    url: https://craton.riscvottawa.ca/
+    about: The Craton book.
+  - name: Contributing guide
+    url: https://github.com/riscv-ottawa/craton/blob/main/CONTRIBUTING.md
+    about: How changes are made, signed off, licensed and reviewed.
